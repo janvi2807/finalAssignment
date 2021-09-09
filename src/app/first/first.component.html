@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="col-12">
+        <br>
+        <br>
+
+        <div class="card">
+<br>
+            <div class="card-body">
+            <form [formGroup]="InputData">
+                <div class="form-group form-inline text-left">
+                    <label class="mr-4" for="title">Title:</label>
+                    <input id="title" class="form-control col-10" type="text" formControlName="title">
+                </div>
+                <br>
+                <div class="form-group form-inline text-left">
+                    <label for="url">URL:</label>
+                    <input class="form-control" id="url" type="file" (change)="onChange($event)" >
+                </div>
+                <br>
+                <div class="form-group text-left form-inline">
+                    <label class="text-blue">Thumbnail URL:</label>
+                    <input class="form-control" type="file" id="thumbnailUrl"(change)="onChange1($event)">
+                </div>
+                <br>
+            </form>
+                <button class="btn btn-success" (click)="onUpload()" type="submit">POST</button>
+            <br></div>
+            <br>
+        </div>
+        <br>
+        <br>
+        <div>
+            <button class="btn btn-primary" (click)="JsonPlaceholderPhotos()">Json Photos</button>   
+        </div>
+        
+    </div>
+</div>
